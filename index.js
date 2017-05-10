@@ -31,6 +31,8 @@ module.exports = {
     // Possible Errors
     // http://eslint.org/docs/rules/#possible-errors
     // ---------------------------------------------
+    // 'no-await-in-loop': 0,
+    // 'no-compare-neg-zero': 0,
     'no-cond-assign': 0, // eslint:recommended
     // 'no-console': 2, // eslint:recommended
     // 'no-constant-condition': 2, // eslint:recommended
@@ -39,8 +41,8 @@ module.exports = {
     // 'no-dupe-args': 2, // eslint:recommended
     // 'no-dupe-keys': 2, // eslint:recommended
     // 'no-duplicate-case': 2, // eslint:recommended
-    // 'no-empty-character-class': 2, // eslint:recommended
     // 'no-empty': 2, // eslint:recommended
+    // 'no-empty-character-class': 2, // eslint:recommended
     // 'no-ex-assign': 2, // eslint:recommended
     // 'no-extra-boolean-cast': 2, // eslint:recommended
     // 'no-extra-parens': 0,
@@ -76,9 +78,9 @@ module.exports = {
     // 'array-callback-return': 0,
     // 'block-scoped-var': 0,
     // 'class-methods-use-this': 0,
-    // 'complexity': 0,
+    'complexity': [2, 4],
     // 'consistent-return': 0
-    // 'curly': 0, // TODO(philipwalton): add an option to enforce braces with
+    'curly': [2, "all"], // TODO(philipwalton): add an option to enforce braces with
                    // the exception of simple, single-line if statements.
     'default-case': 2,
     // 'dot-location': 0,
@@ -111,20 +113,21 @@ module.exports = {
     // 'no-magic-numbers': 0,
     'no-multi-spaces': 2,
     'no-multi-str': 2,
+    // 'no-new': 0,
     // 'no-new-func': 0,
     'no-new-wrappers': 2,
-    // 'no-new': 0,
-    // 'no-octal-escape': 0,
     // 'no-octal': 2, // eslint:recommended
+    // 'no-octal-escape': 0,
     // 'no-param-reassign': 0,
     // 'no-proto': 0,
     // 'no-redeclare': 2, // eslint:recommended
+    // 'no-restricted-properties': 2
     // 'no-return-assign': 0,
     // 'no-script-url': 0,
     // 'no-self-assign': 2, // eslint:recommended
     'no-self-compare': 2,
     // 'no-sequences': 0,
-    'no-throw-literal': 2, // eslint:recommended
+    'no-throw-literal': 2, 
     // 'no-unmodified-loop-condition': 0,
     // 'no-unused-expressions': 0,
     // 'no-unused-labels': 2, // eslint:recommended
@@ -135,7 +138,9 @@ module.exports = {
     // 'no-void': 0,
     'no-warning-comments': [1, { "terms": ["todo", "fixme"], "location": "anywhere" }],
     'no-with': 2,
+    // 'prefer-promise-reject-errors': 2,
     // 'radix': 0,
+    // 'require-await': 2,
     // 'vars-on-top': 0,
     'wrap-iife': [2, 'outside'],
     'yoda': [2, 'never', { 'onlyEquality': true }],
@@ -143,7 +148,7 @@ module.exports = {
     // Strict Mode
     // http://eslint.org/docs/rules/#strict-mode
     // -----------------------------------------
-    // 'script': 0,
+    // 'strict': 0,
 
     // Variables
     // http://eslint.org/docs/rules/#variables
@@ -153,13 +158,12 @@ module.exports = {
     // 'no-delete-var': 2, // eslint:recommended
     // 'no-label-var': 0,
     // 'no-restricted-globals': 0,
-    // 'no-shadow-restricted-names': 0,
     // 'no-shadow': 0,
-    'no-undef-init': 2,
+    // 'no-shadow-restricted-names': 0,
     // 'no-undef': 2, // eslint:recommended
+    'no-undef-init': 2,
     // 'no-undefined': 0,
     'no-unused-vars': [2, {args: 'none'}], // eslint:recommended
-    'less-before-define': 2,
 
     // Node.js and CommonJS
     // http://eslint.org/docs/rules/#nodejs-and-commonjs
@@ -183,6 +187,7 @@ module.exports = {
     // 'block-spacing': 0,
     'brace-style': 2,
     'camelcase': [2, {properties: 'never'}],
+    // 'capitalized-comments': 2,
     'comma-dangle': [2, 'always-multiline'],
     'comma-spacing': 2,
     'comma-style': 2,
@@ -196,7 +201,7 @@ module.exports = {
     // 'id-blacklist': 0,
     // 'id-length': 0,
     // 'id-match': 0,
-     'indent': [2, 4],
+     'indent': [2, 2],
     // 'jsx-quotes': 0,
     'key-spacing': 2,
     'keyword-spacing': 0,
@@ -206,7 +211,7 @@ module.exports = {
     // 'lines-around-directive': 0,
     // 'max-depth': 0,
     'max-len': [2, {
-      code: 80,
+      code: 120,
       tabWidth: 2,
       ignoreUrls: true,
       ignorePattern: '^goog\.(module|require)',
@@ -214,10 +219,9 @@ module.exports = {
     // 'max-lines': 0,
     // 'max-nested-callbacks': 0,
     // 'max-params': 0,
-    // 'max-statements-per-line': 0,
     // 'max-statements': 0,
-    // 'multiline-ternary': 0, // TODO(philipwalton): add a rule to enforce the
-                               // operator appearing at the end of the line.
+    // 'max-statements-per-line': 0,
+    'multiline-ternary': [ 2, 'always'],
     'new-cap': 2,
     // 'new-parens': 0,
     // 'newline-after-var': 0,
@@ -230,6 +234,7 @@ module.exports = {
     'no-lonely-if': 2,
     // 'no-mixed-operators': 0,
     'no-mixed-spaces-and-tabs': 2, // eslint:recommended
+    // 'no-multi-assign': 2,
     'no-multiple-empty-lines': [2, {max: 2}],
     // 'no-negated-condition': 0,
     // 'no-nested-ternary': 0,
@@ -242,15 +247,16 @@ module.exports = {
     // 'no-underscore-dangle': 0,
     // 'no-unneeded-ternary': 0,
     // 'no-whitespace-before-property': 0,
+    // 'nonblock-statement-body-position': 0,
     // 'object-curly-newline': 0,
     'object-curly-spacing': 2,
     // 'object-property-newline': 0,
-    // 'one-var-declaration-per-line': 0,
     'one-var': [2, {
       var: 'never',
       let: 'never',
       const: 'never',
     }],
+    // 'one-var-declaration-per-line': 0,
     // 'operator-assignment': 0,
     'operator-linebreak': 2,
     'padded-blocks': [2, 'never'],
@@ -263,8 +269,8 @@ module.exports = {
         ClassDeclaration: true,
       },
     }],
-    'semi-spacing': 2,
     'semi': 2,
+    'semi-spacing': 2,
     // 'sort-keys': 0,
     // 'sort-vars': 0,
     'space-before-blocks': 2,
@@ -273,6 +279,7 @@ module.exports = {
     // 'space-infix-ops': 0,
     // 'space-unary-ops': 0,
     'spaced-comment': [2, 'always'],
+    'template-tag-spacing': 0,
     // 'unicode-bom': 0,
     // 'wrap-regex': 0,
 
@@ -302,6 +309,7 @@ module.exports = {
     // 'object-shorthand': 0,
     // 'prefer-arrow-callback': 0,
     // 'prefer-const': 0,
+    // 'prefer-destructuring': 0,
     // 'prefer-numeric-literals': 0,
     // 'prefer-reflect': 0,
     'prefer-rest-params': 2,
