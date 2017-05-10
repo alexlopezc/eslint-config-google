@@ -80,25 +80,25 @@ module.exports = {
     // 'consistent-return': 0
     // 'curly': 0, // TODO(philipwalton): add an option to enforce braces with
                    // the exception of simple, single-line if statements.
-    // 'default-case': 0,
+    'default-case': 2,
     // 'dot-location': 0,
     // 'dot-notation': 0,
-    // 'eqeqeq': 0,
+    'eqeqeq': [2, 'always'],
     'guard-for-in': 2,
-    // 'no-alert': 0,
+    'no-alert': 2,
     'no-caller': 2,
     // 'no-case-declarations': 2, // eslint:recommended
     // 'no-div-regex': 0,
     // 'no-else-return': 0,
-    // 'no-empty-function': 0,
+    'no-empty-function': 2,
     // 'no-empty-pattern': 2, // eslint:recommended
     // 'no-eq-null': 0,
     // 'no-eval': 0,
     'no-extend-native': 2,
     'no-extra-bind': 2,
-    // 'no-extra-label': 0,
+    'no-extra-label': 2,
     // 'no-fallthrough': 2, // eslint:recommended
-    // 'no-floating-decimal': 0,
+    'no-floating-decimal': 2,
     // 'no-global-assign': 0,
     // 'no-implicit-coercion': 0,
     // 'no-implicit-globals': 0,
@@ -122,22 +122,23 @@ module.exports = {
     // 'no-return-assign': 0,
     // 'no-script-url': 0,
     // 'no-self-assign': 2, // eslint:recommended
-    // 'no-self-compare': 0,
+    'no-self-compare': 2,
     // 'no-sequences': 0,
     'no-throw-literal': 2, // eslint:recommended
     // 'no-unmodified-loop-condition': 0,
     // 'no-unused-expressions': 0,
     // 'no-unused-labels': 2, // eslint:recommended
     // 'no-useless-call': 0,
-    // 'no-useless-concat': 0,
-    // 'no-useless-escape': 0,
+    'no-useless-concat': 1,
+    'no-useless-escape': 1,
+    'no-useless-return': 2,
     // 'no-void': 0,
-    // 'no-warning-comments': 0,
+    'no-warning-comments': [1, { "terms": ["todo", "fixme"], "location": "anywhere" }],
     'no-with': 2,
     // 'radix': 0,
     // 'vars-on-top': 0,
-    // 'wrap-iife': 0,
-    // 'yoda': 0,
+    'wrap-iife': [2, 'outside'],
+    'yoda': [2, 'never', { 'onlyEquality': true }],
 
     // Strict Mode
     // http://eslint.org/docs/rules/#strict-mode
@@ -154,11 +155,11 @@ module.exports = {
     // 'no-restricted-globals': 0,
     // 'no-shadow-restricted-names': 0,
     // 'no-shadow': 0,
-    // 'no-undef-init': 0,
+    'no-undef-init': 2,
     // 'no-undef': 2, // eslint:recommended
     // 'no-undefined': 0,
     'no-unused-vars': [2, {args: 'none'}], // eslint:recommended
-    // 'no-use-before-define': 0,
+    'less-before-define': 2,
 
     // Node.js and CommonJS
     // http://eslint.org/docs/rules/#nodejs-and-commonjs
@@ -195,8 +196,7 @@ module.exports = {
     // 'id-blacklist': 0,
     // 'id-length': 0,
     // 'id-match': 0,
-    // 'indent': 0, // TODO(philipwalton): this rule isn't compatible with
-                    // Google's 4-space indent for line continuations.
+     'indent': [2, 4],
     // 'jsx-quotes': 0,
     'key-spacing': 2,
     'keyword-spacing': 0,
@@ -225,9 +225,9 @@ module.exports = {
     // 'newline-per-chained-call': 0,
     'no-array-constructor': 2,
     // 'no-bitwise': 0,
-    // 'no-continue': 0,
+    'no-continue': 2,
     // 'no-inline-comments': 0,
-    // 'no-lonely-if': 0,
+    'no-lonely-if': 2,
     // 'no-mixed-operators': 0,
     'no-mixed-spaces-and-tabs': 2, // eslint:recommended
     'no-multiple-empty-lines': [2, {max: 2}],
@@ -252,7 +252,7 @@ module.exports = {
       const: 'never',
     }],
     // 'operator-assignment': 0,
-    // 'operator-linebreak': 0,
+    'operator-linebreak': 2,
     'padded-blocks': [2, 'never'],
     'quote-props': [2, 'consistent'],
     'quotes': [2, 'single', {allowTemplateLiterals: true}],
